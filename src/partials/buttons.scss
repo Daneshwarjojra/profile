@@ -1,0 +1,253 @@
+.btn_large__filled {
+  background-color: $brand-color;
+  color: $white;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 15px 30px;
+  cursor: pointer;
+  border: 1px solid $brand-color;
+  @include border-radius(4px);
+  position: relative;
+  &:hover {
+    background-color: $brand-color-hover;
+    color: $white;
+    text-decoration: none;
+    color: $white;
+  }
+  &:focus, &:active,&:visited {
+    background-color: $brand-color-clicked;
+    outline: none;
+    text-decoration: none;
+    color: $white;
+  }
+  &:disabled {
+    background-color: $dark-background;
+    color: $link-disabled;
+    cursor: not-allowed;
+  }
+}
+.btn_small__filled {
+  @extend .btn_large__filled;
+  text-transform: capitalize;
+  padding: 8px 15px;
+}
+.btn_icon__padding {
+  padding: 8px 15px 8px 35px;
+}
+
+.btn_very_small__filled {
+  @extend .btn_small__filled;
+  font-size: 14px;
+  padding: 2px 7px !important;
+  margin: 0 1px;
+}
+
+a.btn_small__filled {
+  color: white;
+  text-decoration: none;
+}
+
+.btn_large {
+  border:1px solid $brand-color;
+  color: $brand-color;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px 30px;
+  @include border-radius(4px);
+  cursor: pointer;
+  background-color: transparent;
+  &:hover {
+    border-color: $brand-color-hover;
+    color: $brand-color-hover;
+  }
+  &:focus, &:active {
+    border-color: $brand-color-clicked;
+    color: $brand-color-clicked;
+    outline: none;
+    background-color: transparent;
+  }
+  &:disabled {
+    border-color: $dark-background;
+    color: $link-disabled;
+    cursor: not-allowed;
+  }
+}
+.btn_small {
+  @extend .btn_large;
+  text-transform: capitalize;
+  padding: 8px 15px;
+}
+
+.btn_very_small {
+  @extend .btn_small;
+  font-size: 14px;
+  padding: 2px 7px !important;
+  margin: 0 1px;
+}
+
+.ghost_small {
+  @extend .btn_large;
+  text-transform: capitalize;
+  padding: 6px 15px;
+}
+
+.btn_link {
+  background-color: transparent;
+  color: $link-color;
+  font-size: 16px;
+  text-transform: cpitalize;
+  display: inline-block;
+  padding: 8px 15px;
+  cursor: pointer;
+  border: 0 none;
+  @include border-radius(0px);
+  position: relative;
+  &:hover {
+    background-color: transparent;
+    text-decoration: none;
+    color: $link-color;
+  }
+  &:focus, &:active {
+    background-color: transparent;
+    outline: none;
+    text-decoration: none;
+    color: $link-color;
+  }
+  &:disabled {
+    background-color: $dark-background;
+    color: $link-disabled;
+    cursor: not-allowed;
+  }
+}
+
+.btn_danger__filled {
+  background-color: $error-color;
+  color: $white;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 15px 30px;
+  cursor: pointer;
+  border: 1px solid $error-color;
+  @include border-radius(4px);
+  position: relative;
+  &:hover {
+    background-color: $error-color;
+    color: $white;
+    text-decoration: none;
+    color: $white;
+  }
+  &:focus, &:active {
+    background-color: $error-color;
+    outline: none;
+    text-decoration: none;
+    color: $white;
+  }
+  &:disabled {
+    background-color: $dark-background;
+    color: $link-disabled;
+    cursor: not-allowed;
+  }
+}
+
+.btn_danger {
+  border:1px solid $error-color;
+  color: $error-color;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px 30px;
+  @include border-radius(4px);
+  cursor: pointer;
+  background-color: transparent;
+  &:hover {
+    border-color: $error-color;
+    color: $error-color;
+  }
+  &:focus, &:active {
+    border-color: $error-color;
+    color: $error-color;
+    outline: none;
+    background-color: transparent;
+  }
+  &:disabled {
+    border-color: $dark-background;
+    color: $link-disabled;
+    cursor: not-allowed;
+  }
+}
+
+.ghost_danger__small {
+  @extend .btn_danger;
+  text-transform: capitalize;
+  padding: 6px 15px;
+}
+.btn_dark {
+  background: #333;
+  color: #fff;
+  padding: 12px 60px;
+  font-size: 18px;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 4px;
+}
+.close_button {
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 0 none;
+  position: relative;
+  background-color: transparent;
+  &:before, &:after {
+    content: '';
+    width: 1px;
+    height: 14px;
+    position: absolute;
+    background-color: $white;
+  }
+  &:before {
+    left: 10px;
+    top: 4px;
+    @include transform(rotate(45deg));
+  }
+  &:after {
+    right: 11px;
+    top: 4px;
+    @include transform(rotate(-45deg));
+  }
+}
+.cancel {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  float: right;
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 6px;
+  &:before{
+    @extend %pseudo-block;
+    transform: rotate(45deg);
+  }
+  &:after {
+    @extend %pseudo-block;
+    transform: rotate(-45deg);
+  }
+}

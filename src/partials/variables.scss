@@ -1,0 +1,79 @@
+/* Colors */
+$brand-color: #1eacb2;
+$brand-color-hover: #3fc1c6;
+$brand-color-clicked: #179fa5;
+$primary-text: #444444;
+$link-color: #36a2eb;
+$link-disabled: #CCCCCC;
+$border-color: #dddddd;
+$success-color: #5cb85c;
+$warning-color: #ec971f;
+$error-color: #d9534f;
+$light-background: #F9F9F9;
+$dark-background: #EAEAEA;
+$white: #FFFFFF;
+$secondary-text: #888888;
+$dropdown-linkColor: #555555;
+$alert-textColor: #666666;
+$remove-icon: #959595;
+$lightGrey: #EEE;
+$darkGrey: #a6a6a6;
+$black: #000;
+$tagColor: #eaeaea;
+$inputBorderColor: #c7c7c7;
+$halt: #e27b16;
+$trashed-color: #350d0d;
+$completed-color: #51a1cf;
+$newstate-color: #663399;
+
+/* Placeholder Mixin */
+$pseudo-placeholder: "::-webkit-input-placeholder" "::-moz-placeholder" ":-ms-input-placeholder" "::placeholder";
+
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+@mixin border-radius($property) {
+  -webkit-border-radius: $property;
+  border-radius: $property;
+}
+
+@mixin box-shadow($property) {
+  -webkit-box-shadow: $property;
+  -moz-box-shadow: $property;
+  box-shadow: $property;
+}
+
+@mixin padding($property) {
+  padding: $property;
+}
+
+@mixin placeholder {
+  @each $pseudo in $pseudo-placeholder {
+    @at-root #{&}#{$pseudo} {
+      @content
+    }
+  }
+}
+
+@function slabel($key) {
+  @return map-get($slabel-theme, $key);
+}
+
+$slabel-theme: (
+  border: 0,
+  padding: 10px 1px,
+);
+
+%pseudo-block {
+  content: '';
+  background-color: $link-disabled;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  width: 2px;
+  height: 100%;
+}

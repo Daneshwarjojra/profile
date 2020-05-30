@@ -1,0 +1,8 @@
+.description-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    span {
+        align-self: flex-end;
+    }
+}

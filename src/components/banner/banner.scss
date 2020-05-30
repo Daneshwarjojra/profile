@@ -1,0 +1,14 @@
+.bannerWrapper {
+    padding-top: 60px;
+}
+.bannerImgWrapper {
+    width: 100%;
+    position: relative;
+    min-height: 400px;
+    background-color: #f7f7ff;
+}
+
+@media (max-width: 991px) {
+    .bannerWrapper {padding-top: 45px;}
+}
+  

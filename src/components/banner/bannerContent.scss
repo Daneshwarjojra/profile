@@ -1,0 +1,90 @@
+.banner-content {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    .avatar-icon {width: 100%; max-width: 120px;}
+    .banner-heading {
+      font-size: 24px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      color: #fff38d;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    .banner-tag-line {
+      font-size: 16px;
+      font-weight: 400;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.28;
+      color: #ffffff;
+      margin-top: 0;
+    }
+    .progress-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      .report-icon {
+        width: 20px;
+      }
+    }
+    .meter { 
+      height: 15px;
+      position: relative;
+      background: #f3efe6;
+      overflow: hidden;
+      flex-basis: 90%;
+      span {
+        display: block;
+        height: 100%;
+      }
+    }
+  
+    .progress {
+      background-color: #1eacb2;
+      animation: progressBar 3s ease-in-out;
+      animation-fill-mode:both; 
+    }
+    
+    @keyframes progressBar {
+      0% { width: 0; }
+      100% { width: 100%; }
+    }
+    .profile-status {
+      list-style: none;
+      padding: 0;
+      color: #fff;
+      li {
+        display: inline-block;
+        margin-right: 15px;
+        &:last-child {margin-right: 0;}
+        .parofile-action-icon {
+          width: 20px;
+          vertical-align: sub;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .social-icons-wrapper {
+    margin-top: 20px;
+    text-align: right;
+    a {
+      display: inline-block; margin-right: 20px; 
+      &:last-child {margin-right: 0;}
+    }
+    .social-icon {
+      width: 20px;
+    }
+  }
+  @media (max-width: 991px) {
+    .banner-content {
+      top: 0;
+      position: relative;
+      padding-bottom: 20px;
+    }
+  }
+ 

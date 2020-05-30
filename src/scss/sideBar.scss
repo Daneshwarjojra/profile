@@ -1,0 +1,63 @@
+.shortNote {
+    max-height: 40px;
+    overflow: hidden;
+}
+.fullNote {
+    max-height: 100%;
+    transition: max-height 3s;
+}
+.tabList {
+    background-color: aliceblue;
+    padding: 10px;
+    margin-top: 20px;
+    .tab-list {
+        font-size: 16px;
+        li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            &:hover {
+                color: #1eacb2;
+                font-weight: 600;
+            }
+            &:last-child {margin-bottom: 0;}
+            &.activeTab {
+                color: #1eacb2;
+                font-weight: 600; 
+            }
+        }
+    }
+}
+.sideBox {
+    margin: 40px 0;
+    display: block;
+    width: 100%;
+    border: 1px solid #eee;
+    .sideboxTitile {
+        background-color: #f7f7f7;
+        padding: 10px 15px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        text-transform: capitalize;
+    }
+    .sideboxDetails {
+        background-color: aliceblue;
+        max-height: 300px;
+        overflow: auto;
+    }
+    .sideboxRows {
+        display: flex;
+        padding: 20px 15px 15px 15px;
+        border-bottom: 1px solid #ddd;
+        &:last-child {
+            border-bottom: 0;
+        }
+        .sideboxAvatar {
+            text-transform: capitalize;
+            margin-left: 20px;
+        }
+    }
+    .sideBox-avatar-icon {
+        width: 60px;
+        height: 60px;
+    }
+}

@@ -1,0 +1,92 @@
+.topNavbar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.22);
+    .brand-logo {
+      display: inline-block;
+      color: #1eacb2;
+      font-size: 30px;
+      font-weight: bold;
+      &:hover,&:focus {
+        text-decoration: none;
+      }
+    }
+    .navbar-search-wrapper {
+      display: inline-block;
+      width: 100%;
+      max-width: 30%;
+      position: relative;
+      .navbar-search {
+        width: 100%;
+        border-radius: 20px;
+        padding: 5px 30px;
+      }
+      .nav-search-icon {
+        width: 15px;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        cursor: pointer;
+      }
+    }
+    &.nav-on-scroll {
+      position: sticky;
+      top: 0;
+    }
+  }
+  .responsive-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menu-list {
+    li {
+      a {
+        padding: 20px;
+        img {width: 25px;margin-right: 5px;}
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .topNavbar {
+      .navbar-search-wrapper {display: none;}
+      .brand-logo {padding-top: 5px; font-size: 24px;}
+    }
+    .responsive-navbar {
+      display: block;
+      .navbar-toggle {
+        margin: 0;
+        display: block;
+      }
+      .navbar-collapse {
+        height: 0;
+        overflow: hidden;
+        &.expandNavbar {
+          transition: 2s;
+          height: 100%;
+          overflow: auto;
+        }
+      }
+    }
+    .menu-list {
+      float: none;
+      margin: 0;
+      li {
+        float: none;
+      }
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .menu-list {
+      li {
+        a {
+          padding: 20px 8px;
+        }
+      }
+    } 
+  }
