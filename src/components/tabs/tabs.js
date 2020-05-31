@@ -61,48 +61,185 @@ class ProfileTabs extends Component {
                 {
                     TabContent.map((content,index) => {
                         return (
-                            <Tab key={index}>{content.Title}</Tab>
+                            <Tab data-value={content.Title} key={index}>{content.Title}</Tab>
                         )
                     })
                 }
                 </TabList>
+                
+                <TabPanel>
                 {
-                    TabContent.map((content,index) => {
+                    TabContent.map((content,i) => {
                         return (
-                            <TabPanel key={index}>
-                            {
-                                TabContent.map((content,i) => {
-                                    return (
-                                        <div key={i} className="comment-box-wrapper">
-                                            <div className="profile-user clearfix">
-                                                <div className="col-md-2 col-xs-4 tl">
-                                                    <img className="profile-user-icon" src={content.src} alt={content.Title + i} />
-                                                </div>
-                                                <div className="col-md-10 col-xs-8">
-                                                    <p className="comment-person-name">{content.personName}</p>
-                                                    <p className="comment-reviewer">Reviewd {content.reviewerName}</p>
-                                                </div>
-                                            </div>
-                                            <p className="comment-time pl15">{content.time}</p>
-                                            <div className="previous-images">
-                                                <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
-                                                <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
-                                                <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
-                                                <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
-                                            </div>
-                                            <div className="comment-box js-parentHandle">
-                                                <p className="js-extend shortNote">{content.comment}</p>
-                                                <ReadMore />
-                                                <Counter/>
-                                            </div>
+                            <div className="main-content-wrapper">
+                                <h2 className="fwB">Journey</h2>
+                                <div key={i} className="comment-box-wrapper">
+                                    <div className="profile-user clearfix">
+                                        <div className="col-md-2 col-xs-4 tl">
+                                            <img className="profile-user-icon" src={content.src} alt={content.Title + i} />
                                         </div>
-                                    )
-                                })
-                            }
-                            </TabPanel>
+                                        <div className="col-md-10 col-xs-8">
+                                            <p className="comment-person-name">{content.personName}</p>
+                                            <p className="comment-reviewer">Reviewd {content.reviewerName}</p>
+                                        </div>
+                                    </div>
+                                    <p className="comment-time pl15">{content.time}</p>
+                                    <div className="previous-images">
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                    </div>
+                                    <div className="comment-box js-parentHandle">
+                                        <p className="js-extend shortNote">{content.comment}</p>
+                                        <ReadMore />
+                                        <Counter/>
+                                    </div>
+                                </div>
+                            </div>
                         )
                     })
                 }
+                </TabPanel>
+
+                <TabPanel>
+                {
+                    TabContent.map((content,i) => {
+                        return (
+                            <div className="main-content-wrapper">
+                                <h2 className="fwB">Reviews</h2>
+                                <div key={i} className="comment-box-wrapper">
+                                    <div className="profile-user clearfix">
+                                        <div className="col-md-2 col-xs-4 tl">
+                                            <img className="profile-user-icon" src={content.src} alt={content.Title + i} />
+                                        </div>
+                                        <div className="col-md-10 col-xs-8">
+                                            <p className="comment-person-name">{content.personName}</p>
+                                            <p className="comment-reviewer">Reviewd {content.reviewerName}</p>
+                                        </div>
+                                    </div>
+                                    <p className="comment-time pl15">{content.time}</p>
+                                    <div className="previous-images">
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                    </div>
+                                    <div className="comment-box js-parentHandle">
+                                        <p className="js-extend shortNote">{content.comment}</p>
+                                        <ReadMore />
+                                        <Counter/>
+                                    </div>
+                                </div>
+                            </div>                       )
+                    })
+                }
+                </TabPanel>
+
+                <TabPanel>
+                {
+                    TabContent.map((content,i) => {
+                        return (
+                            <div className="main-content-wrapper">
+                                <h2 className="fwB">Photos</h2>
+                                <div key={i} className="comment-box-wrapper">
+                                    <div className="profile-user clearfix">
+                                        <div className="col-md-2 col-xs-4 tl">
+                                            <img className="profile-user-icon" src={content.src} alt={content.Title + i} />
+                                        </div>
+                                        <div className="col-md-10 col-xs-8">
+                                            <p className="comment-person-name">{content.personName}</p>
+                                            <p className="comment-reviewer">Reviewd {content.reviewerName}</p>
+                                        </div>
+                                    </div>
+                                    <p className="comment-time pl15">{content.time}</p>
+                                    <div className="previous-images">
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                    </div>
+                                    <div className="comment-box js-parentHandle">
+                                        <p className="js-extend shortNote">{content.comment}</p>
+                                        <ReadMore />
+                                        <Counter/>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+                </TabPanel>
+
+                <TabPanel>
+                {
+                    TabContent.map((content,i) => {
+                        return (
+                            <div className="main-content-wrapper">
+                                <h2 className="fwB">Trips</h2>
+                                <div key={i} className="comment-box-wrapper">
+                                    <div className="profile-user clearfix">
+                                        <div className="col-md-2 col-xs-4 tl">
+                                            <img className="profile-user-icon" src={content.src} alt={content.Title + i} />
+                                        </div>
+                                        <div className="col-md-10 col-xs-8">
+                                            <p className="comment-person-name">{content.personName}</p>
+                                            <p className="comment-reviewer">Reviewd {content.reviewerName}</p>
+                                        </div>
+                                    </div>
+                                    <p className="comment-time pl15">{content.time}</p>
+                                    <div className="previous-images">
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                    </div>
+                                    <div className="comment-box js-parentHandle">
+                                        <p className="js-extend shortNote">{content.comment}</p>
+                                        <ReadMore />
+                                        <Counter/>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+                </TabPanel>
+
+                <TabPanel>
+                {
+                    TabContent.map((content,i) => {
+                        return (
+                            <div className="main-content-wrapper">
+                                <h2 className="fwB">Stats</h2>
+                                <div key={i} className="comment-box-wrapper">
+                                    <div className="profile-user clearfix">
+                                        <div className="col-md-2 col-xs-4 tl">
+                                            <img className="profile-user-icon" src={content.src} alt={content.Title + i} />
+                                        </div>
+                                        <div className="col-md-10 col-xs-8">
+                                            <p className="comment-person-name">{content.personName}</p>
+                                            <p className="comment-reviewer">Reviewd {content.reviewerName}</p>
+                                        </div>
+                                    </div>
+                                    <p className="comment-time pl15">{content.time}</p>
+                                    <div className="previous-images">
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                        <img className="previous-images-icons" src={content.src2} alt={content.Title + i} />
+                                    </div>
+                                    <div className="comment-box js-parentHandle">
+                                        <p className="js-extend shortNote">{content.comment}</p>
+                                        <ReadMore />
+                                        <Counter/>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+                </TabPanel>
             </Tabs>
         );
     }

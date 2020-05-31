@@ -8,19 +8,35 @@ import TripsBar from '../../body/tripsSection/tripsbar';
 class Description extends Component {
     constructor(props) {
         super(props);
-        this.handleTabSwitching = this.handleTabSwitching.bind(this);
+        this.handleSideTabSwitching = this.handleSideTabSwitching.bind(this);
         this.handleActive = this.handleActive.bind(this);
+        this.handleMainTabSwitching = this.handleMainTabSwitching.bind(this);
     }
 
-    handleTabSwitching = () => {
+    handleSideTabSwitching = () => {
         let sideTab = document.querySelectorAll('[data-id]');
         for (let x = 0; x < sideTab.length; x++) {
-            sideTab[x].addEventListener('click', function(event) {
+            sideTab[x].addEventListener('click', function() {
                 let getdataVal = this.getAttribute('data-id');
                 let triggerElem = document.querySelectorAll('.react-tabs__tab');
                 for (let y = 0; y < triggerElem.length; y++) {
                     if (triggerElem[y].getAttribute('id') === getdataVal) {
                         triggerElem[y].click();
+                    }
+                }
+            }, false);
+        }
+    }
+
+    handleMainTabSwitching = () => {
+        let mainTab = document.querySelectorAll('[data-value]');
+        for (let x = 0; x < mainTab.length; x++) {
+            mainTab[x].addEventListener('click', function() {
+                let getdataVal = this.getAttribute('id');
+                let mainTriggerElem = document.querySelectorAll('[data-id]');
+                for (let y = 0; y < mainTriggerElem.length; y++) {
+                    if (mainTriggerElem[y].getAttribute('data-id') === getdataVal) {
+                        mainTriggerElem[y].click();
                     }
                 }
             }, false);
@@ -37,7 +53,8 @@ class Description extends Component {
     }
 
     componentDidMount() {
-        this.handleTabSwitching();
+        this.handleSideTabSwitching();
+        this.handleMainTabSwitching();
     }
 
     render() {

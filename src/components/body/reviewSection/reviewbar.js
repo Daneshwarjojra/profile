@@ -55,7 +55,7 @@ class Reviewbar extends Component {
     render() {
         return (
             <div className="review-wrapper sideBox">
-                <div className="review-title sideboxTitile">Popular reviews vy mahek jain</div>
+                <div className="review-title sideboxTitile">Popular reviews by mahek jain</div>
                 <div className="review-details sideboxDetails">
                     {
                         reviewDetails.map((item,i) => {
