@@ -11,25 +11,14 @@ class ReadMore extends Component {
         let readmoreElement = document.querySelectorAll('.read-more');
         for (let i = 0; i < readmoreElement.length; i++) {
             readmoreElement[i].addEventListener('click', function () {
-                handleClick(this);
-            }, false);
-        }
-
-        function handleClick(object) {
-            let container = object.getElementsByClassName('readMoreText')[0];
-            if (container !== undefined) {
-                if (container.classList.contains('active')) {
-                    let currentParent = container.parentElement;
-                    currentParent.parentElement.querySelector('.js-extend').classList.remove('fullNote');
-                    container.innerText = 'Read More';
-                    container.classList.remove('active');
-                }else{
-                    let currentParent = container.parentElement;
+                let childElem = this.querySelector('.readMoreText');
+                let container = document.querySelectorAll('.readMoreText');
+                for (let x = 0; x< container.length; x++) {
+                    let currentParent = childElem.parentElement;
+                    childElem.innerText = '';  
                     currentParent.parentElement.querySelector('.js-extend').classList.add('fullNote');
-                    container.innerText = 'Read Less';
-                    container.classList.add('active');
-                } 
-            }
+                }
+            }, false);
         }
     }
 
