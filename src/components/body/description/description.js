@@ -8,9 +8,21 @@ import TripsBar from '../../body/tripsSection/tripsbar';
 class Description extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            toggle: false,
+            extendClassName: '',
+        }
         this.handleSideTabSwitching = this.handleSideTabSwitching.bind(this);
         this.handleActive = this.handleActive.bind(this);
         this.handleMainTabSwitching = this.handleMainTabSwitching.bind(this);
+        this.handleExtendClass = this.handleExtendClass.bind(this);
+    }
+
+    handleExtendClass = () => {
+        this.setState(state => ({
+            toggle: !state.toggle,
+            setClassName: 'fullNote'
+        }));
     }
 
     handleSideTabSwitching = () => {
